@@ -16,9 +16,7 @@ var Dajaxice = {
     get_args: function(callback_function, argv, custom_settings){
         return Dajaxice.call('simple.get_args', 'GET', callback_function, argv, custom_settings);
     },
-    getitem: function(callback_function, argv, custom_settings){
-        return Dajaxice.call('simple.getitem', 'GET', callback_function, argv, custom_settings);
-    },
+
     bye: function(callback_function, argv, custom_settings){
         return Dajaxice.call('simple.bye', 'GET', callback_function, argv, custom_settings);
     },
