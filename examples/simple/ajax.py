@@ -7,7 +7,7 @@ from dajaxice.decorators import dajaxice_register
 def getitem(request, argu):
     arguu = str(argu)
     arguu = arguu[11:]
-    with open('write.json','r') as f:
+    with open('/home/desii/write.json','r') as f:
         while True:
     	    l = f.readline()
             line = l.rstrip()
@@ -37,7 +37,7 @@ def lol(request):
 
 @dajaxice_register(method='GET')
 def get_args(request, foo):
-    f = open('write.json','a')
+    f = open('/home/desii/write.json','a')
     f.write(foo+ '\n')
     f.close()
     return simplejson.dumps({'message': ' %s' % foo})
