@@ -6,7 +6,7 @@ from dajaxice.decorators import dajaxice_register
 @dajaxice_register(method='GET', name='simple.getitem')
 def getitem(request, argu):
     arguu = str(argu)
-    arguu = arguu[11:]
+    arguu = arguu[29:]
     with open('/home/desii/write.json','r') as f:
         while True:
     	    l = f.readline()
@@ -36,11 +36,11 @@ def lol(request):
 
 
 @dajaxice_register(method='GET')
-def get_args(request, foo):
+def get_args(request, keys):
     f = open('/home/desii/write.json','a')
-    f.write(foo+ '\n')
+    f.write(keys+'\n')
     f.close()
-    return simplejson.dumps({'message': ' %s' % foo})
+    return simplejson.dumps({'message': ' %s' % keys})
 '''
     /*Dajaxice.simple.getitem(function(final){c=final},{'arg':a})*/
 
